@@ -7,8 +7,9 @@
         width: 100%;
         padding: 0 2%;
     }
-}
-
+    .selfie-pic {        
+        -webkit-transform: rotate(90deg);}
+    }
 
 @media only screen and (max-width: 1023px) {
     section { padding: 60px 0; }
@@ -16,6 +17,9 @@
     .form { width: 97%; }
 }
 
+    .selfie-pic {        
+        -webkit-transform: rotate(90deg);}
+    }
 
 @media only screen and (max-width: 800px) {
     html,
