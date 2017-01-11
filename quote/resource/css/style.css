@@ -1,4 +1,3 @@
-
 h1 {
   font-family: "Georgia";
 }
@@ -16,7 +15,7 @@ body {
 #quoteDisplay {
   margin-left: 25%;
   margin-right: 25%;
-  margin-top: 10%;
+  margin-top: 2%;
   font-size: 20px;
   font-family: cursive;
   color: #black;
