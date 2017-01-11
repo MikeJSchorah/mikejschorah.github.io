@@ -7,7 +7,7 @@ var lat;
     long = data2.lon;
     
     // Declare and assign API key   
-    var api = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=722e7954b04ed331cd45c1033c51e22b'
+    var api = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=d342736db268b20eb5e401a2ff7b384c'
 
         
 // JSON call for API
