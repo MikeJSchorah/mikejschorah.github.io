@@ -208,16 +208,7 @@ header {
 /* bottom border for hero image */
 .header-bot-border { border-top: 2px solid #d9593d; }
 
-/* ------------------------------------ */
-/* ABOUT ME */
-/* ------------------------------------ */
-.selfie-pic {
-    display: block;
-    margin: 0 auto;
-    
-    width: 180px;
-    border-radius: 50%;
-}
+
 
 /* ------------------------------------ */
 /* SKILLS */
