@@ -1,24 +1,15 @@
-h1 {
-  color: white;
-}
-h5 {
-  color: white;
+.info{
+  font-family:'Montserrat';
 }
 
-br {
-  color: white;
+#logo{
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
 }
-
-body{
-  background-size:cover;
+#patreon{
+ width:15%;
 }
-
-div {
-  text-align: center;
-}
-
-#bottom {
-    position: fixed;
-    bottom: 0;
-  color: white;
+.btn-lg{
+  margin:5px;
 }
