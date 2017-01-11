@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Show the Local Weather</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="resource/css/style.css">
-</head>   
-<body>
-<div>
-  <h1>Show the Local Weather</h1>
-<ul class="list-unstyled">
-  <li class="btn btn-default" id="weather"></li>
-  <li class="btn btn-default" id="fahrenheit"></li>
-</ul>
-  <br>
-  <h5>Special Thanks to Open Weather Map API for Providing Our Weather!</h5>
+<body  ng-app="weatherApp" ng-controller="weatherCtrl"ng-style="weatherBackground" >
+<div class="text-center info">
+  <h1> {{city}}</h1>
+  <h1>{{channelInfo.heading}}</h1>
+  <h2>{{channelInfo.subheading1}}</h2>
+  <a ng-href="http://www.{{channelInfo.subheading2}}" target="blank"><h3>{{channelInfo.subheading2}}</h3></a>
+  <a class ="btn-lg btn-primary">{{description | uppercase}}  <img id="weatherIcon" ng-src="{{icon}}"/></a>
+ <a class ="btn-lg btn-primary"> {{speed}}</a>
+ <a class ="btn-lg btn-primary"> {{name}}</a>
+  <a class ="btn-lg btn-primary" ng-init="tempVal=true" ng-show="tempVal" ng-click="tempVal=!tempVal">{{cTemp}}</a>
+   <a class ="btn-lg btn-primary" ng-show="!tempVal" ng-click="tempVal=!tempVal">{{fTemp}}</a>
+  <a ng-href="https://www.{{channelInfo.subheading2}}" target="blank">
+ <img ng-src="{{channelInfo.logo}}" id="logo"/>
+  </a>
+  <a ng-href="http://www.{{channelInfo.subheading3}}">
+  <img id="patreon" src="http://www.codingtutorials360.com/startbootstrap-landing-page-1.0.5/img/patreon.png"/>
+  </a>
 </div>
-<p id="bottom">Written and coded by Mike J Schorah</p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="resource/js/script.js"></script></body>
-</html>
+</body>
