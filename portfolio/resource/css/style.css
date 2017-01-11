@@ -214,7 +214,7 @@ header {
 .selfie-pic {
     display: block;
     margin: 0 auto;
-    margin-bottom: 25px;
+    
     width: 180px;
     border-radius: 50%;
 }
