@@ -1,62 +1,85 @@
-$(document).ready(function() {
-      
-var lat;
-  var long;
-  $.getJSON("http://ip-api.com/json", function(data2) {
-    lat = data2.lat;
-    long = data2.lon;
-    
-    // Declare and assign API key   
-    var api = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=d342736db268b20eb5e401a2ff7b384c'
+var classApp = angular.module('weatherApp', []);
 
-        
-// JSON call for API
-    $.getJSON(api, function(data) {
-      var weather = data.weather[0].description;
-      var kelvin = data.main.temp;
-      var city = data.name;
-      console.log(city);
-          
-
-// Temperature conversion formulas 
-      var fahrenheit = (kelvin * (9 / 5) - 459.67).toFixed(0);
-      var celsius = (kelvin - 273).toFixed(0);
-
-          
-// Display weather on buttons
-      $("#weather").html(weather);
-      $("#fahrenheit").html(fahrenheit + " &#8457;");
-
-          
-// Toggle between Fahrenheit and Celsius
-      var conditionTrade = true;
-      $("#fahrenheit").click(function() {
-        if (conditionTrade === false) {
-          $("#fahrenheit").html(fahrenheit + " &#8457;");
-          conditionTrade = true;
-        } else {
-          $("#fahrenheit").html(celsius + " &#8451;");
-          conditionTrade = false;
-        }
-      })
-          
-          
-// See different background image depending on weather    
-      if (fahrenheit > 70) {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/743/boiling-eggs-1559351.jpg');
-      } else if (fahrenheit > 60) {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/32e/hot-water-1553622.jpg)');
-      } else if (fahrenheit > 40) {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/074/cold-1393397.jpg)');
-      } else {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/38d/freeze-1406444.jpg)')
-      }
-      
-    });
-  }
-    
-  ); 
-
-
-   
-});
+classApp.controller('weatherCtrl', function ($scope, $http) {
+  var vm = $scope;
+  vm.channelInfo={
+    heading:"Open Weather API Project",
+    subheading1: "Free Code Camp: Front End Projects",
+    subheading2: "YouTube.com/CodingTutorials360",
+    subheading3: "Patreon.com/CodingTutorials360",
+    logo: "http://codingtutorials360.com/img/smallLogo.png"
+  };
+$http.get("http://ip-api.com/json").success(function(data){
+vm.lat= data.lat;
+  vm.lon= data.lon;
+  var apiKey="d342736db268b20eb5e401a2ff7b384c";
+  var openWeatherURL = "http://api.openweathermap.org/data/2.5/weather?lat="+ vm.lat + "&lon="+vm.lon+ "&appid=" +apiKey;
+  console.log(openWeatherURL);
+  $http.get(openWeatherURL).success(function(data){
+    vm.description=data.weather[0].description;
+    vm.speed = (2.237*data.wind.speed).toFixed(1) + " mph";
+    vm.name=data.name;
+    vm.temp=data.main.temp;
+    vm.fTemp= (vm.temp*(9/5)-459.67).toFixed(1) + "  (°F)";
+    vm.cTemp = (vm.temp-273).toFixed(1) + "  (°C)";
+    vm.icon = "http://openweathermap.org/img/w/"+ data.weather[0].icon + ".png";
+  
+      switch(vm.description){
+         case "clear sky": {
+           vm.weatherBackground={
+             "background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/clearSky.jpg')",
+             "background-size": "cover"
+           };
+           break;
+         }
+          case "broken clouds": {
+          vm.weatherBackground = {"background": "url(' http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/brokenClouds.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+             case "few clouds": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/fewClouds.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+           case "mist": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/mist.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+           case "mist": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/mist.jpg')",
+             "background-size": "cover" };
+            break;
+          } 
+        case "rain": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/rain.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+            case "scattered clouds": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/scatteredClouds.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+          case "shower rain": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/showerRain.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+          case "snow": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/snow.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+          case "thunderstorm": {
+          vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/Thunder.jpg')",
+             "background-size": "cover" };
+            break;
+          }
+        default:
+            vm.weatherBackground = {"background": "url('http://codingtutorials360.com/img/FreeCodeCamp/OpenWeather/sun.jpg')",
+             "background-size": "cover" };
+            break;
+         }
+  });
