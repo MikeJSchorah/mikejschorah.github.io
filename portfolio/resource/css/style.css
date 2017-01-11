@@ -259,6 +259,17 @@ header {
 .skills-logo:last-child { margin-right: 0; }
 
 /* ------------------------------------ */
+/* ABOUT ME */
+/* ------------------------------------ */
+.selfie-pic {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 180px;
+    border-radius: 50%;
+    -webkit-transform: rotate(90deg);
+}
+/* ------------------------------------ */
 /* PORTFOLIO */
 /* ------------------------------------ */
 .port-wrapper a {
