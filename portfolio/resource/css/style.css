@@ -106,8 +106,8 @@ p {
 /* ------------------------------------ */
 header {
     /* https://www.pexels.com/ */
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(webdeveloper.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(webdeveloper.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(img:webdeveloper.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(img:webdeveloper.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
