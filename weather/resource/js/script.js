@@ -1,62 +1,58 @@
-$(document).ready(function() {
-      
+$(document).ready(function(){
+
 var lat;
   var long;
-  $.getJSON("http://ip-api.com/json", function(data2) {
-    lat = data2.lat;
-    long = data2.lon;
+    $.getJSON("http://ip-api.com/json",function(data2){
+      lat=data2.lat;
+      long= data2.lon;
+       var api = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid=b86d21440d8c9a110912a2eb0845abb4'; 
     
-    // Declare and assign API key   
-    var api = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=722e7954b04ed331cd45c1033c51e22b'
-
-        
-// JSON call for API
-    $.getJSON(api, function(data) {
-      var weather = data.weather[0].description;
-      var kelvin = data.main.temp;
-      var city = data.name;
+$.getJSON(api, function(data){
+       var fTemp;
+  var cTemp;
+  var kTemp;
+      var tempSwap=true;
+    //JSON call for Open Weather API
+   var weatherType= data.weather[0].description;
+        kTemp = data.main.temp;
+       var windSpeed= data.wind.speed;
+    var city = data.name;
+    //Temperture in Kelvin
+    fTemp = (kTemp*(9/5)-459.67).toFixed(1);
+    //Temp in F
+    //City name
+    cTemp = (kTemp-273).toFixed(1);
       console.log(city);
-          
-
-// Temperature conversion formulas 
-      var fahrenheit = (kelvin * (9 / 5) - 459.67).toFixed(0);
-      var celsius = (kelvin - 273).toFixed(0);
-
-          
-// Display weather on buttons
-      $("#weather").html(weather);
-      $("#fahrenheit").html(fahrenheit + " &#8457;");
-
-          
-// Toggle between Fahrenheit and Celsius
-      var conditionTrade = true;
-      $("#fahrenheit").click(function() {
-        if (conditionTrade === false) {
-          $("#fahrenheit").html(fahrenheit + " &#8457;");
-          conditionTrade = true;
-        } else {
-          $("#fahrenheit").html(celsius + " &#8451;");
-          conditionTrade = false;
+     $("#city").html(city);
+      $("#weatherType").html(weatherType);
+      $("#fTemp").html(fTemp + " &#8457;");
+      $("#fTemp").click(function(){
+        if(tempSwap===false){
+          $("#fTemp").html(fTemp + " &#8457;"); 
+          tempSwap=true;
         }
-      })
-          
-          
-// See different background image depending on weather    
-      if (fahrenheit > 70) {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/743/boiling-eggs-1559351.jpg');
-      } else if (fahrenheit > 60) {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/32e/hot-water-1553622.jpg)');
-      } else if (fahrenheit > 40) {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/074/cold-1393397.jpg)');
-      } else {
-        $('body').css('background-image', 'url(http://images.freeimages.com/images/previews/38d/freeze-1406444.jpg)')
-      }
-      
+        else{
+          $("#fTemp").html(cTemp + " &#8451;");
+          tempSwap=false;
+        }   
+      });
+windSpeed = (2.237*(windSpeed)).toFixed(1);
+       $("#windSpeed").html(windSpeed + " mph");
+    if(fTemp>80){
+     $('body').css('background-image','url(https://images.unsplash.com/photo-1414269665217-a57681e266b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=6fd9f051bea811268593340698b6a822)');
+    }
+     else if(fTemp>70){
+         $('body').css('background-image','url(https://images.unsplash.com/photo-1428592953211-077101b2021b?crop=entropy&fit=crop&fm=jpg&h=1000&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925)');
+     }
+       else if(fTemp>60){
+         $('body').css('background-image','url(https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=9dee70ba78c49619bc7f5c8a91778f2b)');
+     }
+      else if(fTemp>50){
+        $('body').css('background-image','url(https://images.unsplash.com/photo-1422020297037-97bd356cc312?crop=entropy&fit=crop&fm=jpg&h=1250&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=2400)');
+      } 
+  });
     });
-  }
-    
-  ); 
-
-
+ //API URL with geolocation
    
+
 });
