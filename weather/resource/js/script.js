@@ -5,7 +5,7 @@ var lat;
     $.getJSON("http://ip-api.com/json",function(data2){
       lat=data2.lat;
       long= data2.lon;
-       var api = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid=b86d21440d8c9a110912a2eb0845abb4'; 
+       var api = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid=d342736db268b20eb5e401a2ff7b384c'; 
     
 $.getJSON(api, function(data){
        var fTemp;
