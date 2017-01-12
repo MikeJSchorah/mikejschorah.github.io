@@ -268,7 +268,7 @@ header {
     margin-bottom: 25px;
     width: 180px;
     border-radius: 50%;
-    } 
+    -webkit-transform: rotate(270deg);    } 
 
 /* ------------------------------------ */
 /* PORTFOLIO */
