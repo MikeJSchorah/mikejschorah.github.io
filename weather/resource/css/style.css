@@ -1,24 +1,3 @@
-h1 {
-  color: white;
-}
-h5 {
-  color: white;
-}
-
-br {
-  color: white;
-}
-
 body{
   background-size:cover;
-}
-
-div {
-  text-align: center;
-}
-
-#bottom {
-    position: fixed;
-    bottom: 0;
-  color: white;
 }
