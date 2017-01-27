@@ -19,22 +19,37 @@ html, body {
   overflow-x: hidden
 }
 
+@media (max-width: 1300px) {
+    .header-images img {
+        max-height: 450px;
+    }
+}
+
 @media (max-width: 1024px) {
   html, body {
     font-size: 16px;
   }
+  .header-images img {
+    max-height: 350px;
+}
   }
 
 @media (max-width 768px) {
   html, body {
     font-size: 14px;
   }
+    .header-images img {
+        max-height: 1px;
+    }
   }
 
 @media (max-width: 375px) {
   html, body {
     font-size: 13px;
   }
+    .header-images img {
+        max-height: .5px;
+    }
   }
 
 /* ------------------------------------ */
@@ -124,8 +139,8 @@ a:hover {
 
 /* CAROUSEL */
 .header-images img {
-    max-height: 500px;
     margin: 0 auto;
+   
 }
 
 /* BUTTONS */
