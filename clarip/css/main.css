@@ -1,5 +1,9 @@
 @import url(//fonts.googleapis.com/css?family=Fjalla+One);
 
+html {
+	overlow: hidden;
+}
+
 .clearfix {
     *zoom: 1;
 }
