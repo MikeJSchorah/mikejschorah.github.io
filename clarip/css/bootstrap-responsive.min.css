@@ -1,10 +1,5 @@
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+html {
+    overflow: hidden;
 }
 
 .clearfix {
@@ -92,14 +87,7 @@ html,body
     .hidden-phone {
         display: none!important
     }
-    html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
+
 }
 
 .visible-print {
@@ -954,14 +942,7 @@ html,body
     .carousel-caption {
         position: static
     }
-    html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
+
 }
 
 @media(max-width:979px) {
@@ -1114,14 +1095,7 @@ html,body
         padding-right: 10px;
         padding-left: 10px
     }
-    html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
+
 }
 
 @media(min-width:980px) {
