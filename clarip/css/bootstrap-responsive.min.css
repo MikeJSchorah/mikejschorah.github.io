@@ -1,3 +1,7 @@
+html {
+   overflow: hidden;
+}
+
 .clearfix {
     *zoom: 1
 }
