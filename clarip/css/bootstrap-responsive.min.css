@@ -92,9 +92,6 @@ html,body
     .hidden-phone {
         display: none!important
     }
-  html {
-     overflow: hidden;
-   }
 }
 
 .visible-print {
