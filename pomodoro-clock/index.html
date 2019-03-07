@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Clock</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="text-center">
+      <h1>Pomodoro Clock</h1>
+      <div id="sessionTimeDiv">
+        <h1 id="time1">Session Time</h1>
+        <a href="#" class="btn btn-primary" id="subtract5">-<a>
+        <h2 id="sessionTime"></h2>
+        <h2 id="num">5</h2>
+        <a href="#" class="btn btn-primary" id="add5">+</a>
+        <a href="#" class="btn btn-primary" id="stop">Stop</a>
+      </div>
+      <div id="breakTimeDiv">
+        <h1 id="time2">Break Time</h1>
+        <a href="#" class="btn btn-primary" id="subtract5Break">-</a>
+        <h2 id="breakTime">5</h2>
+        <a href="#" class="btn btn-primary" id="add5Break">+</a>
+      </div>
+      <a href="#" class="btn btn-primary" id="start">Start</a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
