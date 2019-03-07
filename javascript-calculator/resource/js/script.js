@@ -1,15 +1,15 @@
 $(document).ready(function() {
-  //Array for key presses
+  //Array for validation
   var inputs = [""];
-  //String to store current input string
+  //String that is being outputted
   var totalString;
-  //Operators array for validation without the .
-  var operators1 = ["+", "-", "/", "*"];
-  //Operators array with the . for validation 
+  //Variables used for validation
+  var operators1 = ["+", "-", "/", "*"]; 
   var operators2 = ["."];
-  //Numbers for validation
+  //Makes sure that everything is a number
   var nums = [0,1,2,3,4,5,6,7,8,9];
   
+  //Updates everything
   function getValue(input){
     if(operators2.includes(inputs[inputs.length-1]===true && input===".")){
       console.log("Duplicat '.' ");
@@ -18,7 +18,7 @@ $(document).ready(function() {
     else if(inputs.length===1 && operators1.includes(input)===false){
       inputs.push(input);
     }
-      //If last character was not an operator add operator to the array
+      //If last character was not an operator, add operator to the array
     else if(operators1.includes(inputs[inputs.length-1])===false){
       inputs.push(input);
     }
@@ -27,14 +27,19 @@ $(document).ready(function() {
     }
     update();
   }
+
+  //Updates output to the current value
   function update(){
     totalString = inputs.join("");
     $("#steps").html(totalString);
   }
+
+  //Evaluates update
   function getTotal(){
     totalString = inputs.join("");
     $("#steps").html(eval(totalString));
   }
+  //Determines the computation
   $("a").on("click", function(){
     if(this.id === "clear"){
       inputs = [""];
