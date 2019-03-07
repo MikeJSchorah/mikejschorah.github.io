@@ -1,0 +1,57 @@
+html, body {
+  background-color: white;
+}
+h1 {
+  color: black;
+  font-family: "Oswald";
+  text-align: center;
+}
+
+#display {
+  width: 400px;
+  height: 75px;
+  background-color: lightgray;
+  margin: 100px auto 0 auto;
+  padding-top: 20px;
+
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+}
+  
+
+#calculator {
+  background-color: black;
+  width: 400px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius:.5em;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+#clear, #backspace {
+  background-color: orange;
+}
+
+a {
+  margin: 6px 3px 6px 3px;
+  width: 6vw;
+  height: 3vw;
+  background-color: white;
+  color: blue;
+}
+
+.bigButton {
+  width:175px;
+}
+
+#steps {
+  padding-left: 50px;
+  font-size: 2em;
+}
+
+
+
+
