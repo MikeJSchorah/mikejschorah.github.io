@@ -97,10 +97,8 @@ $(document).ready(function() {
         menu.removeAttr('style');
     }
     }); 
-    
-    /* hamburger menu */
+});
+  /* hamburger menu */
     function myFunction(x) {
         x.classList.toggle("change");
     }
-
-});
