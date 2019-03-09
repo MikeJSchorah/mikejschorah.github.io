@@ -114,29 +114,25 @@ header {
     height: 100vh;
 }
 
-.logo {
-    font-family: 'Pacifico', cursive;
-    float: left;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 30px;
-}
-
-.logo:hover,
-.logo:active { color: #d9593d; }
 
 /* NAV */
 .main-nav {
     text-align: right;
     list-style: none;
     margin-top: 35px;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:2;
 }
 
 .main-nav li {
     display: inline-block;
-    margin: 0 20px 0 13px;
+    margin: 0 18px 0 11px;
     line-height: 135%;
     vertical-align: bottom;
+    font-size: 17px;
 }
 
 .main-nav li a:link,
@@ -152,20 +148,6 @@ header {
 
 .main-nav li a:hover,
 .main-nav li a:active { border-bottom: 2px solid #d9593d; }
-
-/* mobile nav */
-.mobile-nav-icon {
-    position: fixed;
-    right: 15px;
-    top: 12px;
-    cursor: pointer;
-    display: none;
-}
-
-.mobile-nav-icon i {
-    font-size: 200%;
-    color: #fff;
-}
 
 /* STICKY NAV */
 .sticky {
@@ -194,18 +176,6 @@ header {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-}
-
-/* LANDING PAGE SCROLL BTN */
-.scroll-down-btn {
-    color: #fff;
-    position: absolute;
-    bottom: 5%;
-    left: 49.5%;
-    -webkit-animation-duration: 2.5s;
-    animation-duration: 2.5s;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
 }
 
 /* bottom border for hero image */
