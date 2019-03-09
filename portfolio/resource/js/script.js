@@ -72,33 +72,4 @@ $(document).ready(function() {
     }, {
         offset: '59%'
     })
-    
-    /* Mobile nav */
-    $('.js--nav-icon').click(function() {
-        var nav = $('.js--main-nav');
-        var icon = $('.js--nav-icon i');
-        
-        nav.toggle()
-        
-        if (icon.hasClass('ion-navicon-round')) {
-            icon.addClass('ion-close-round');
-            icon.removeClass('ion-navicon-round');
-        } else {
-            icon.addClass('ion-navicon-round');
-            icon.removeClass('ion-close-round');
-        }
-    });
-    
-    /* show nav again once window is resized from mobile to computer nav, in this case 800px */
-    $(window).resize(function() {
-    var w = $(window).width();
-    var menu = $('nav ul');
-    if (w > 800 && menu.is(':hidden')) {
-        menu.removeAttr('style');
-    }
-    }); 
 });
-  /* hamburger menu */
-    function myFunction(x) {
-        x.classList.toggle("change");
-    }
