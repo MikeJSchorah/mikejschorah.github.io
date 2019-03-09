@@ -118,8 +118,8 @@ p {
 /* ------------------------------------ */
 header {
     /* https://www.pexels.com/ */
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(web-development2.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(web-development2.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(web-development2-final.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(web-development2-final.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
