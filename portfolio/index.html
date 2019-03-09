@@ -5,31 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio | Mike J Schorah - Web Developer</title>
         <meta name="description" context=" Mike J Schorah personal portfolio">
-        <link rel="stylesheet" type="text/css" href="vendor/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="vendor/css/animate.css">
-        <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendor/css/ionicons.min.css">
-        <link rel="stylesheet" type="text/css" href="resource/css/style.css">
-        <link rel="stylesheet" type="text/css" href="resource/css/queries.css">
+        <link rel="stylesheet" type="text/css" href="hamburgergrid.css">
+        <link rel="stylesheet" type="text/css" href="hamburgeranimate.css">
+        <link rel="stylesheet" type="text/css" href="hamburgernormalize.css">
+        <link rel="stylesheet" type="text/css" href="hamburgerionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="hamburger.css">
+        <link rel="stylesheet" type="text/css" href="hamburgermedia.css">
         <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Pacifico' rel='stylesheet' type='text/css'>
     </head>
     <body>
-       
         <header id="top">
-            <nav>
-                <div class="row">
-                    <ul class="main-nav js--main-nav">
-                        <li><a href="#about-me">About me</a></li>
-                        <li><a href="#skills">Skill set</a></li>
-                        <li><a href="#my-work">My work</a></li>
-                    </ul>
-                    <div class="container" onclick="myFunction(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </div>
-            </nav>
+          <nav>
+              <div class="row">
+                <ul class="main-nav js--main-nav">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about-me">About</a></li>
+                  <li><a href="#my-portfolio">Portfolio</a></li>
+                  <li><a href="#contact-me">Contact</a></li>
+                </ul>
+             </div>
+          </nav>
+          <section id="home" class="js--home">
             <div class="hero-text-box">
                 <h1>
                     <span class="orange">Web</span> Results<br>
@@ -37,9 +33,9 @@
                 </h1>
                 <span class="hero-small-text">Mike J Schorah, Web Developer</span>
             </div>  
+          </section>
         </header>
         <div class="header-bot-border"></div>
-        
         
         <section id="about-me" class="js--about-me">
             <div class="row">
@@ -85,7 +81,7 @@
         </section>
          
           
-        <section id="my-work" class="portfolio">
+        <section id="my-portfolio" class="portfolio">
            <div class="row">
                 <h2>My Work</h2>
             </div>
@@ -169,16 +165,17 @@
             </div>
         
         </section>
-                    
-        <footer>
+        <section id="contact-me" class="js--contact-me">
+        </section>            
+          <footer>
             <div class="row copyright">
                 <p>
                     Copyright &copy; 2017 by Mike J Schorah. All rights reserved.
                 </p>
             </div>
-        </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script src="vendor/js/jquery.waypoints.min.js"></script>
-        <script src="resource/js/script.js"></script>
-    </body> 
+          </footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+          <script src="hamburgerwaypoints.min.js"></script>
+          <script src="hamburger.js"></script>
+      </body> 
    </html>
