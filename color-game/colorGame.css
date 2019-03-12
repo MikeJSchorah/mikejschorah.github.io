@@ -79,12 +79,11 @@ button:hover {
   bottom: 0;
   color: white;
   font-size: 15px;
-  margin-top: 20px;
-  padding-top: 20px;
 }
 
 @media only screen and (min-width: 800px) {
-	html, body {
-		height: 75%;
+	#bottom {
+		margin-top: 20px;
+  		padding-top: 20px;
 	}
 }
