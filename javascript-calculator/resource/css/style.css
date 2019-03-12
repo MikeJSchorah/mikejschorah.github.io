@@ -1,5 +1,6 @@
 html, body {
   background-color: white;
+  background-repeat: no-repeat;
 }
 h1 {
   color: black;
@@ -49,4 +50,11 @@ a {
 #steps {
   padding-left: 50px;
   font-size: 2em;
+}
+
+#bottom {
+  position: fixed;
+  bottom: 0;
+  color: black;
+  font-size: 15px;
 }
