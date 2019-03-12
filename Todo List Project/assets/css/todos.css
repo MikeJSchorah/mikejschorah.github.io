@@ -84,3 +84,10 @@ input:focus {
 	color: gray;
 	text-decoration: line-through;
 }
+
+#bottom {
+  position: fixed;
+  bottom: 0;
+  color: black;
+  font-size: 15px;
+}
