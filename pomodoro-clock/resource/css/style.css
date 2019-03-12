@@ -1,3 +1,7 @@
+html, body {
+	height: 100%;
+}
+
 body {
   background-image: url("https://images.unsplash.com/photo-1495364141860-b0d03eccd065?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
   background-size: 100%;
@@ -5,6 +9,7 @@ body {
   color: black;
   font-family: "Lato";
   text-shadow: 1px 1px 2px #000000;
+  background-repeat: no-repeat;
 }
 
 div#sessionTimeDiv {
@@ -25,4 +30,11 @@ h2 {
 
 .btn-primary {
 	background-color: #ffa500;
+}
+
+#bottom {
+  position: fixed;
+  bottom: 0;
+  color: black;
+  font-size: 15px;
 }
