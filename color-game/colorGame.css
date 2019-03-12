@@ -87,4 +87,7 @@ button:hover {
 		margin-top: 100px;
   		padding-top: 100px;
 	}
+	#container {
+		height: 75%;
+	}
 }
