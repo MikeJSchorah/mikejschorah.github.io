@@ -9,6 +9,7 @@ body {
   color: black;
   font-family: "Lato";
   text-shadow: 1px 1px 2px #000000;
+  background-size: cover;
 }
 
 div#sessionTimeDiv {
