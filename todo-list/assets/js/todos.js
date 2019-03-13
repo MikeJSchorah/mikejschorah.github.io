@@ -1,9 +1,9 @@
-// Check Off Specific Todos By Clicking
+//Put a line through the todo that you've done
 $("ul").on("click", "li", function() {
 	$(this).toggleClass("completed");
 });
 
-//Click on X to delete Todo
+//Delete the todo
 $("ul").on("click", "span", function(event) {
 	$(this).parent().fadeOut(500,function() {
 		$(this).remove();
@@ -11,16 +11,16 @@ $("ul").on("click", "span", function(event) {
 	event.stopPropagation();
 });
 
+// Store value from input and add value/string to list
 $("input[type='text']").keypress(function(event) {
 	if(event.which === 13) {
-		//grabbing new todo text from input
 		var todoText = $(this).val();
 		$(this).val("");
-		//create a new li and add to ul
 		$("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "<li>");
 	}
 });
 
+// Click the box to create a todo
 $(".fa-plus").click(function() {
 	$("input[type='text'").fadeToggle()
 });
